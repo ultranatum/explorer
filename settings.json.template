@@ -5,15 +5,15 @@
 */
 {
   // name your instance!
-  "title": "IQUIDUS",
+  "title": "Ultragate Explorer",
 
   "address": "127.0.0.1:3001",
 
   // coin name
-  "coin": "Darkcoin",
+  "coin": "Ultragate",
 
   // coin symbol
-  "symbol": "DRK",
+  "symbol": "ULG",
 
   // logo
   "logo": "/images/logo.png",
@@ -36,7 +36,7 @@
 
   // database settings (MongoDB)
   "dbsettings": {
-    "user": "iquidus",
+    "user": "ultragate",
     "password": "3xp!0reR",
     "database": "explorerdb",
     "address": "localhost",
@@ -53,13 +53,13 @@
 
   "wallet": {
     "host": "localhost",
-    "port": 9332,
-    "username": "darkcoinrpc",
+    "port": 32553,
+    "username": "ultragaterpc",
     "password": "123gfjk3R3pCCVjHtbRde2s5kzdf233sa"
   },
 
   // confirmations
-  "confirmations": 40,
+  "confirmations": 30,
 
   // language settings
   "locale": "locale/en.json",
@@ -67,9 +67,9 @@
   // menu settings
   "display": {
     "api": true,
-    "markets": true,
+    "markets": false,
     "richlist": true,
-    "twitter": true,
+    "twitter": false,
     "facebook": false,
     "googleplus": false,
     "youtube": false,
@@ -77,7 +77,7 @@
     "movement": true,
     "network": true,
     // Settings to switch navbar theme, leaving both false will use the 'primary' navbar
-    "navbar_dark": false,
+    "navbar_dark": true,
     "navbar_light": false
   },
 
@@ -88,7 +88,7 @@
     "show_market_cap": false,
     // Show Market Cap in place of price box
     "show_market_cap_over_price": false,
-    "difficulty": "POW",
+    "difficulty": "POS",
     "last_txs": 100,
     "txs_per_page": 10
   },
@@ -129,14 +129,14 @@
   },
 
   // twitter, facebook, googleplus, youtube
-  "twitter": "iquidus",
+  "twitter": "Ultragate",
   "facebook": "yourfacebookpage",
   "googleplus": "yourgooglepluspage",
   "youtube": "youryoutubechannel",
 
   //genesis
-  "genesis_tx": "65f705d2f385dc85763a317b3ec000063003d6b039546af5d8195a5ec27ae410",
-  "genesis_block": "b2926a56ca64e0cd2430347e383f63ad7092f406088b9b86d6d68c2a34baef51",
+  "genesis_tx": "2040b0abc8d4a76241d511d9a913f363770304d18617a599e839869aeef7061b",
+  "genesis_block": "000005d00e2076ace681b9e05a491475d47b64015da1f6f80dd7910cde0133ce",
 
   //heavy (enable/disable additional heavy features)
   "heavy": false,
@@ -157,7 +157,7 @@
   // HEAVY: retreive from heavys getsupply api call
   // BALANCES : total of all address balances
   // TXOUTSET : retreive from gettxoutsetinfo api call
-  "supply": "COINBASE",
+  "supply": "GETINFO",
 
   // how to acquire network hashrate
   // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
