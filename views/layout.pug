@@ -31,6 +31,7 @@ html
             var supplyString = json.data[0].supply;
             var diffString = json.data[0].difficulty;
             var hashrateString = json.data[0].hashrate;
+            var mncountString = json.data[0].masternodecount;
             if (!isNaN(json.data[0].difficulty)) {
               diffString = parseFloat(json.data[0].difficulty).toFixed(2);
             }
@@ -40,10 +41,14 @@ html
             if (!isNaN(json.data[0].hashrate)) {
               hashrateString = parseFloat(json.data[0].hashrate).toLocaleString('en');
             }
+            if (!isNaN(json.data[0].masternodecount)) {
+              mncountString = parseInt(json.data[0].masternodecount).toLocaleString('en');
+            }
             $("#supply").text(supplyString);
             $("#difficulty").text(diffString);
             $("#difficultyHybrid").text(json.data[0].difficultyHybrid);
             $("#hashrate").text(hashrateString);
+            $("#mncount").text(mncountString);
             $("#lastPrice").text(parseFloat(json.data[0].lastPrice).toFixed(8) + ' #{settings.markets.exchange}'.toUpperCase());
             $("#marketCap").text((parseFloat(json.data[0].lastPrice).toFixed(8) * parseInt(parseFloat(json.data[0].supply).toFixed(0))).toLocaleString('en') + ' #{settings.markets.exchange}'.toUpperCase());
             $("#lblConnections").text(json.data[0].connections + ' connections');
@@ -188,6 +193,15 @@ html
                   label#lblX1
                 else
                   label#hashrate -
+        .col-md-2
+          .card.card-default.d-none.d-md-block.d-block
+            .card-header
+              strong #{settings.locale.masternodes} (Total)
+            .card-body
+              #mncountcard
+                span.header-icons.fa.fa-gears
+                label#mncount -
+
         .col-md-2
           .card.card-default.d-none.d-md-block.d-block
             .card-header
