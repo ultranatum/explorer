@@ -172,39 +172,6 @@ html
         .col-md-2
           .card.card-default.d-none.d-md-block.d-block
             .card-header
-              if settings.nethash_units == 'K'
-                strong #{settings.locale.network} (KH/s)
-              else if settings.nethash_units == 'M'
-                strong #{settings.locale.network} (MH/s)
-              else if settings.nethash_units == 'G'
-                strong #{settings.locale.network} (GH/s)
-              else if settings.nethash_units == 'T'
-                strong #{settings.locale.network} (TH/s)
-              else if settings.nethash_units == 'P'
-                strong #{settings.locale.network} (PH/s)
-              else if settings.nethash_units == 'H'
-                strong #{settings.locale.network} (H/s)
-            .card-body
-              #hashratecard
-                span.header-icons.fa.fa-gears
-                if settings.index.difficulty == 'Hybrid'
-                  label#hashrate -
-                  <br>
-                  label#lblX1
-                else
-                  label#hashrate -
-        .col-md-2
-          .card.card-default.d-none.d-md-block.d-block
-            .card-header
-              strong #{settings.locale.masternodes} (Total)
-            .card-body
-              #mncountcard
-                span.header-icons.fa.fa-gears
-                label#mncount -
-
-        .col-md-2
-          .card.card-default.d-none.d-md-block.d-block
-            .card-header
               strong #{settings.locale.difficulty}
             .card-body
               #difficultycard
@@ -216,6 +183,15 @@ html
                 else
                   label#difficulty -
         
+        .col-md-2
+          .card.card-default.d-none.d-md-block.d-block
+            .card-header
+              strong #{settings.locale.masternodes} Total
+            .card-body
+              #mncountcard
+                span.header-icons.fa.fa-gears
+                label#mncount -
+
         .col-md-2.col-sm-12
             img(src=settings.logo, style='margin-top:-15px;height:128px;')
         .col-md-2
